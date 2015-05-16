@@ -1,0 +1,5 @@
+/src
+/hardware/ATmega/avr/cores
+/hardware/ATmega/avr/libraries
+/hardware/ATmega/avr/variants
+/hardware/ATmega/avr/platform.txt

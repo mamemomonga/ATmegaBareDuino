@@ -1,0 +1,49 @@
+atmega168p_20MHz: TARGET = atmega168p_20MHz
+atmega168p_20MHz: MCU_TARGET = atmega168p
+atmega168p_20MHz: CFLAGS += $(COMMON_OPTIONS)
+atmega168p_20MHz: CHIP = atmega168p
+atmega168p_20MHz: optiboot_atmega168p_20MHz.hex
+atmega168p_20MHz: optiboot_atmega168p_20MHz.lst
+atmega168p_20MHz: AVR_FREQ=20000000L
+
+atmega168p_16MHz: TARGET = atmega168p_16MHz
+atmega168p_16MHz: MCU_TARGET = atmega168p
+atmega168p_16MHz: CFLAGS += $(COMMON_OPTIONS)
+atmega168p_16MHz: CHIP = atmega168p
+atmega168p_16MHz: optiboot_atmega168p_16MHz.hex
+atmega168p_16MHz: optiboot_atmega168p_16MHz.lst
+atmega168p_16MHz: AVR_FREQ=16000000L
+
+atmega168p_8MHz: TARGET = atmega168p_8MHz
+atmega168p_8MHz: MCU_TARGET = atmega168p
+atmega168p_8MHz: CFLAGS += $(COMMON_OPTIONS)
+atmega168p_8MHz: CHIP = atmega168p
+atmega168p_8MHz: optiboot_atmega168p_8MHz.hex
+atmega168p_8MHz: optiboot_atmega168p_8MHz.lst
+atmega168p_8MHz: AVR_FREQ=8000000L
+
+atmega328p_8MHz: TARGET = atmega328p_8MHz
+atmega328p_8MHz: MCU_TARGET = atmega328p
+atmega328p_8MHz: CFLAGS += $(COMMON_OPTIONS)
+atmega328p_8MHz: CHIP = atmega168p
+atmega328p_8MHz: optiboot_atmega328p_8MHz.hex
+atmega328p_8MHz: optiboot_atmega328p_8MHz.lst
+atmega328p_8MHz: AVR_FREQ=8000000L
+
+atmega328p_16MHz: TARGET = atmega328p_16MHz
+atmega328p_16MHz: MCU_TARGET = atmega328p
+atmega328p_16MHz: CFLAGS += $(COMMON_OPTIONS)
+atmega328p_16MHz: CHIP = atmega168p
+atmega328p_16MHz: optiboot_atmega328p_16MHz.hex
+atmega328p_16MHz: optiboot_atmega328p_16MHz.lst
+atmega328p_16MHz: AVR_FREQ=16000000L
+
+atmega328p_20MHz: TARGET = atmega328p_20MHz
+atmega328p_20MHz: MCU_TARGET = atmega328p
+atmega328p_20MHz: CFLAGS += $(COMMON_OPTIONS)
+atmega328p_20MHz: CHIP = atmega168p
+atmega328p_20MHz: optiboot_atmega328p_20MHz.hex
+atmega328p_20MHz: optiboot_atmega328p_20MHz.lst
+atmega328p_20MHz: AVR_FREQ=20000000L
+
+build_custom: atmega168p_20MHz atmega168p_16MHz atmega168p_8MHz atmega328p_8MHz atmega328p_16MHz atmega328p_20MHz

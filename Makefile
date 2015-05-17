@@ -8,7 +8,7 @@ DESTDIR=hardware/ATmega/avr
 
 export PATH := $(ARDUINO_IDE)/Contents/Java/hardware/tools/avr/bin:$(PATH)
 
-.PHONY: hardware get_optiboot
+.PHONY: hardware get_optiboot all
 
 all: hardware build_optiboot copy_from_arduino
 

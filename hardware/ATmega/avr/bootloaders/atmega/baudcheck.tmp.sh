@@ -1,11 +1,11 @@
 # 1 "baudcheck.c"
-# 1 "/Users/show/Desktop/ATmegaArduino/hardware/ATmega/avr/bootloaders/atmega//"
+# 1 "/Users/show/Documents/Develop/Works/arduino-avr/ATmegaBareDuino/hardware/ATmega/avr/bootloaders/atmega//"
 # 1 "<command-line>"
 # 1 "baudcheck.c"
 # 24 "baudcheck.c"
 bpsx=115200
 bps=${bpsx/L/}
-fcpux=8000000L
+fcpux=20000000L
 fcpu=${fcpux/L/}
 
 

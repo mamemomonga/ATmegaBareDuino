@@ -34,6 +34,7 @@ my %mcu=(
 		maximum_data_size => 1024,
 		key               => 'atmega168p',
 		mcu               => 'atmega168p',
+		ldsections        => '-Wl,--section-start=.text=0x3e00 -Wl,--section-start=.version=0x3ffe',
 		menu => {
 			'External 16MHz' => {
 				key            => '16MHz',
@@ -66,6 +67,7 @@ my %mcu=(
 		maximum_data_size => 2048,
 		key               => 'atmega328p',
 		mcu               => 'atmega328p',
+		ldsections        => '-Wl,--section-start=.text=0x7d80 -Wl,--section-start=.version=0x7ffe',
 		menu => {
 			'External 16MHz' => {
 				key            => '16MHz',
@@ -156,25 +158,28 @@ sub generate_optiboot_custom {
 		my $cpu=$mcu{$cpu_name};
 		foreach my $menu_name (keys %{$cpu->{menu}}) {
 			my $menu=$cpu->{menu}->{$menu_name};
-
 			my $target_name="$cpu->{mcu}_$menu->{key}";
 			my $file_name="optiboot_$target_name";
+
 			push @targets,$target_name;
 
 			$buf.=<< "EOS";
-$target_name: TARGET = $target_name
-$target_name: MCU_TARGET = $cpu->{mcu}
-$target_name: CFLAGS += \$(COMMON_OPTIONS)
-$target_name: CHIP = atmega168p
-$target_name: $file_name.hex
-$target_name: $file_name.lst
-$target_name: AVR_FREQ=$menu->{f_cpu}
+$target_name: TARGET =  $target_name
+$target_name: MCU_TARGET =  $cpu->{mcu}
+$target_name: CHIP       =  $cpu->{mcu}
+$target_name: CFLAGS     += \$(COMMON_OPTIONS)
+$target_name: AVR_FREQ   ?= $menu->{f_cpu}
+$target_name: LDSECTIONS =  $cpu->{ldsections}
+$target_name: \$(PROGRAM)_$target_name.hex
+$target_name: \$(PROGRAM)_$target_name.lst
 
 EOS
 		}
 	}
-
-	$buf.="build_custom: ".join(' ',@targets)."\n";
+	$buf.="build_custom:\n";
+	foreach(@targets) {
+		$buf.="\t\$(MAKE) $_\n";
+	}
 	write_file('hardware/ATmega/avr/bootloaders/atmega/Makefile.custom',$buf);
 }
 

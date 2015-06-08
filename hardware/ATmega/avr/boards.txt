@@ -1,41 +1,5 @@
 menu.f_cpu=CPU Frequency
 
-atmega168p.name=ATmega168P
-atmega168p.upload.tool=avrdude
-atmega168p.upload.protocol=arduino
-atmega168p.bootloader.tool=avrdude
-atmega168p.bootloader.unlock_bits=0x3F
-atmega168p.bootloader.lock_bits=0x0F
-atmega168p.build.mcu=atmega168p
-atmega168p.build.core=arduino
-atmega168p.upload.maximum_size=15872
-atmega168p.upload.maximum_data_size=1024
-atmega168p.upload.speed=115200
-
-atmega168p.menu.f_cpu.16MHz=External 16MHz
-atmega168p.menu.f_cpu.16MHz.build.f_cpu=16000000L
-atmega168p.menu.f_cpu.16MHz.bootloader.low_fuses=0xFF
-atmega168p.menu.f_cpu.16MHz.bootloader.high_fuses=0xDD
-atmega168p.menu.f_cpu.16MHz.bootloader.extended_fuses=0x04
-atmega168p.menu.f_cpu.16MHz.build.variant=standard
-atmega168p.menu.f_cpu.16MHz.bootloader.file=atmega/optiboot_atmega168p_16MHz.hex
-
-atmega168p.menu.f_cpu.20MHz=External 20MHz
-atmega168p.menu.f_cpu.20MHz.build.f_cpu=20000000L
-atmega168p.menu.f_cpu.20MHz.bootloader.low_fuses=0xFF
-atmega168p.menu.f_cpu.20MHz.bootloader.high_fuses=0xDD
-atmega168p.menu.f_cpu.20MHz.bootloader.extended_fuses=0x04
-atmega168p.menu.f_cpu.20MHz.build.variant=standard
-atmega168p.menu.f_cpu.20MHz.bootloader.file=atmega/optiboot_atmega168p_20MHz.hex
-
-atmega168p.menu.f_cpu.8MHz=Internal 8MHz
-atmega168p.menu.f_cpu.8MHz.build.f_cpu=8000000L
-atmega168p.menu.f_cpu.8MHz.bootloader.low_fuses=0xE2
-atmega168p.menu.f_cpu.8MHz.bootloader.high_fuses=0xDD
-atmega168p.menu.f_cpu.8MHz.bootloader.extended_fuses=0x04
-atmega168p.menu.f_cpu.8MHz.build.variant=standard
-atmega168p.menu.f_cpu.8MHz.bootloader.file=atmega/optiboot_atmega168p_8MHz.hex
-
 atmega328p.name=ATmega328P
 atmega328p.upload.tool=avrdude
 atmega328p.upload.protocol=arduino
@@ -47,6 +11,14 @@ atmega328p.build.core=arduino
 atmega328p.upload.maximum_size=32256
 atmega328p.upload.maximum_data_size=2048
 atmega328p.upload.speed=115200
+
+atmega328p.menu.f_cpu.16MHz=External 16MHz
+atmega328p.menu.f_cpu.16MHz.build.f_cpu=16000000L
+atmega328p.menu.f_cpu.16MHz.bootloader.low_fuses=0xFF
+atmega328p.menu.f_cpu.16MHz.bootloader.high_fuses=0xDE
+atmega328p.menu.f_cpu.16MHz.bootloader.extended_fuses=0x05
+atmega328p.menu.f_cpu.16MHz.build.variant=standard
+atmega328p.menu.f_cpu.16MHz.bootloader.file=atmega/optiboot_atmega328p_16MHz.hex
 
 atmega328p.menu.f_cpu.20MHz=External 20MHz
 atmega328p.menu.f_cpu.20MHz.build.f_cpu=20000000L
@@ -64,11 +36,39 @@ atmega328p.menu.f_cpu.8MHz.bootloader.extended_fuses=0x04
 atmega328p.menu.f_cpu.8MHz.build.variant=standard
 atmega328p.menu.f_cpu.8MHz.bootloader.file=atmega/optiboot_atmega328p_8MHz.hex
 
-atmega328p.menu.f_cpu.16MHz=External 16MHz
-atmega328p.menu.f_cpu.16MHz.build.f_cpu=16000000L
-atmega328p.menu.f_cpu.16MHz.bootloader.low_fuses=0xFF
-atmega328p.menu.f_cpu.16MHz.bootloader.high_fuses=0xDE
-atmega328p.menu.f_cpu.16MHz.bootloader.extended_fuses=0x05
-atmega328p.menu.f_cpu.16MHz.build.variant=standard
-atmega328p.menu.f_cpu.16MHz.bootloader.file=atmega/optiboot_atmega328p_16MHz.hex
+atmega168p.name=ATmega168P
+atmega168p.upload.tool=avrdude
+atmega168p.upload.protocol=arduino
+atmega168p.bootloader.tool=avrdude
+atmega168p.bootloader.unlock_bits=0x3F
+atmega168p.bootloader.lock_bits=0x0F
+atmega168p.build.mcu=atmega168p
+atmega168p.build.core=arduino
+atmega168p.upload.maximum_size=15872
+atmega168p.upload.maximum_data_size=1024
+atmega168p.upload.speed=115200
+
+atmega168p.menu.f_cpu.20MHz=External 20MHz
+atmega168p.menu.f_cpu.20MHz.build.f_cpu=20000000L
+atmega168p.menu.f_cpu.20MHz.bootloader.low_fuses=0xFF
+atmega168p.menu.f_cpu.20MHz.bootloader.high_fuses=0xDD
+atmega168p.menu.f_cpu.20MHz.bootloader.extended_fuses=0x04
+atmega168p.menu.f_cpu.20MHz.build.variant=standard
+atmega168p.menu.f_cpu.20MHz.bootloader.file=atmega/optiboot_atmega168p_20MHz.hex
+
+atmega168p.menu.f_cpu.8MHz=Internal 8MHz
+atmega168p.menu.f_cpu.8MHz.build.f_cpu=8000000L
+atmega168p.menu.f_cpu.8MHz.bootloader.low_fuses=0xE2
+atmega168p.menu.f_cpu.8MHz.bootloader.high_fuses=0xDD
+atmega168p.menu.f_cpu.8MHz.bootloader.extended_fuses=0x04
+atmega168p.menu.f_cpu.8MHz.build.variant=standard
+atmega168p.menu.f_cpu.8MHz.bootloader.file=atmega/optiboot_atmega168p_8MHz.hex
+
+atmega168p.menu.f_cpu.16MHz=External 16MHz
+atmega168p.menu.f_cpu.16MHz.build.f_cpu=16000000L
+atmega168p.menu.f_cpu.16MHz.bootloader.low_fuses=0xFF
+atmega168p.menu.f_cpu.16MHz.bootloader.high_fuses=0xDD
+atmega168p.menu.f_cpu.16MHz.bootloader.extended_fuses=0x04
+atmega168p.menu.f_cpu.16MHz.build.variant=standard
+atmega168p.menu.f_cpu.16MHz.bootloader.file=atmega/optiboot_atmega168p_16MHz.hex
 
